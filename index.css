@@ -1,3 +1,34 @@
 body{
     background-color: #141313 !important;
+    font-family: 'Avenir', sans-serif !important;
+}
+.logo{
+    height: 24px;
+}
+.content{
+    margin: 10rem 0 3rem 0;
+    flex-direction: column;
+    align-items: center;
+}
+.content .heading{
+    font-size: 6rem;
+    color: rgba(104, 66, 241, 1);
+    font-weight: 900;
+    background: linear-gradient(to right, #6842F1,
+    #7A40DF, #D74897);
+    background: linear-gradient(to right,  #99F570,
+    #6CE990, #1CC8A6, #01A0C4, #2184D2, #5367DD, #6D46E7, #4560F3, #5575E3, #AC62C7, #DF5080, #EA6B51);
+   
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.content .sub-heading{
+    font-size: 1.1rem;
+    color: #CCC;
+    text-align: center;
+}
+
+/* Properties */
+.m-6{
+    margin: 3rem 0 !important;
 }
