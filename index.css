@@ -1,34 +1,146 @@
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
 body{
     background-color: #141313 !important;
     font-family: 'Avenir', sans-serif !important;
 }
-.logo{
-    height: 24px;
-}
-.content{
-    margin: 10rem 0 3rem 0;
-    flex-direction: column;
-    align-items: center;
-}
-.content .heading{
-    font-size: 6rem;
-    color: rgba(104, 66, 241, 1);
-    font-weight: 900;
-    background: linear-gradient(to right, #6842F1,
-    #7A40DF, #D74897);
-    background: linear-gradient(to right,  #99F570,
-    #6CE990, #1CC8A6, #01A0C4, #2184D2, #5367DD, #6D46E7, #4560F3, #5575E3, #AC62C7, #DF5080, #EA6B51);
-   
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-.content .sub-heading{
-    font-size: 1.1rem;
-    color: #CCC;
-    text-align: center;
+
+.coming-soon-row{
+    padding-top: 180px;
 }
 
-/* Properties */
-.m-6{
-    margin: 3rem 0 !important;
+.coming-soon{
+    font-family: Avenir;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+    background: linear-gradient(93deg, #99F570 11.88%, #65E590 15.12%, #74EB8D 19.01%, #03BEAD 23.53%, #01ABBD 31.76%, #0096CB 39.78%, #5368DD 45.84%, #7041E9 50.17%, #7433F1 54.49%, #2281F4 60.56%, #B55FC4 66.85%, #EC478D 73.54%, #EA6A4E 78.73%, #EB6D5F 84.81%, #EB4376 91.09%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.coming-soon-text{
+    color: #F0F0F0;
+text-align: center;
+font-family: Avenir;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.email-collector{
+    padding-top: 40px;
+}
+
+.input-container{
+    width: 500px;
+    border: 1px solid #a9a9a9;
+    display: inline-block;
+    border-radius: 8px;
+    background: #292929;
+    padding: 10px;
+    border: 0px !important;
+}
+.input-container input:focus, .input-container input:active {
+    outline: none;
+}
+.input-container input {
+    width: 70%;
+    padding: 8px 4px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px !important;
+    color: #fff !important;
+}
+
+.input-container button {
+    float: right;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #FFF;
+    border: none !important;
+}
+
+
+.input-container button:hover{
+    background: linear-gradient(90deg, #6641F2 0%, #EC498A 100%);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer-row{
+    position: fixed;
+    bottom: 16px;
+    width: 100%;
+}
+
+.footer-text{
+    color: #8A8A8A;
+text-align: center;
+font-family: Avenir;
+font-size: 13px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+
+
+
+#form {
+    position: relative;
+    padding-top: 40px;
+  }
+  
+  #form #email {
+    width: 400px;
+    background: #292929;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-style: 18px;
+  }
+  
+  #form .input-box {
+    position: relative;
+  }
+  
+  #text {
+    display: block;
+    color: #000;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px;
+  }
+  
+  #form.invalid .input-box::before {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/invalid.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  
+  #form.valid .input-box::before {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/valid.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+  }

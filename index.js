@@ -1,35 +1,25 @@
-function initClient() {
-    gapi.client.init({
-        apiKey: 'AIzaSyAsT6be_Hg0XqKqJOxykey7KCb_QL-ef60',
-        clientId: '113314560224882986945',
-        discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
-        scope: "https://www.googleapis.com/auth/spreadsheets"
-    }).then(function () {
-        document.getElementById('emailForm').addEventListener('submit', submitForm);
-    });
-}
-
-
-function submitForm(event) {
-    event.preventDefault();
-
-    const email = document.getElementById('email').value;
-    
-    // Append the email to the Google Sheet
-    gapi.client.sheets.spreadsheets.values.append({
-        spreadsheetId: '1qwCm391wo2aJAex3PijbJ-47_VMo4QDEysw8CqfuzGA',
-        range: 'Sheet1', // Adjust sheet name and range as needed
-        valueInputOption: 'RAW',
-        insertDataOption: 'INSERT_ROWS',
-        resource: {
-            values: [[email]]
-        }
-    }).then(function(response) {
-        console.log('Email added successfully');
-    }, function(response) {
-        console.error('Error adding email:', response.result.error.message);
-    });
-}
-
-// Load the Google Sheets API library
-gapi.load('client', initClient);
+function validation() {
+    let form = document.getElementById('form')
+    let email = document.getElementById('email').value
+    let text = document.getElementById('text')
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+  
+    if (email.match(pattern)) {
+      form.classList.add('valid')
+      form.classList.remove('invalid')
+      text.innerHTML = "Your Email Address in valid"
+      text.style.color = '#00ff00'
+    } else {
+      form.classList.remove('valid')
+      form.classList.add('invalid')
+      text.innerHTML = "Please Enter Valid Email Address"
+      text.style.color = '#ff0000'
+    }
+  
+    if (email == '') {
+      form.classList.remove('valid')
+      form.classList.remove('invalid')
+      text.innerHTML = ""
+      text.style.color = '#00ff00'
+    }
+  }
