@@ -5,6 +5,23 @@ body{
     font-family: 'Avenir', sans-serif !important;
 }
 
+.px1{
+    padding: 0 4px;
+}
+.px2{
+    padding: 0 8px;
+}
+.px3{
+    padding: 0 16px;
+}
+.px4{
+    padding: 0 24px;
+}
+.px5{
+    padding: 0 32px;
+}
+
+
 .coming-soon-row{
     padding-top: 180px;
 }
