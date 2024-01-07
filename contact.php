@@ -1,9 +1,9 @@
 <?php
 
 // configure
-$from = 'Demo contact form <demo@domain.com>';
-$sendTo = 'Test contact form <team@uxminds.studio>'; // Add Your Email
-$subject = 'New message from contact form';
+$from = $_POST['email'];
+$sendTo = 'UX Minds <team@uxminds.studio>'; // Add Your Email
+$subject = 'Excited to Join UX Minds';
 $fields = array('name' => 'Name', 'subject' => 'Subject', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in the email
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
 $errorMessage = 'There was an error while submitting the form. Please try again later';
@@ -12,7 +12,7 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
 
 try
 {
-    $emailText = "You have new message from contact form\n=============================\n";
+    $emailText = "Dear UX Minds Team,\n\nThrilled to join as a new subscriber! Eager to delve into your UX insights and resources.\nLooking forward to learning and growing within this vibrant community.\n\nBest,\n";
 
     foreach ($_POST as $key => $value) {
 
